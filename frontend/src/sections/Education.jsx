@@ -1,34 +1,13 @@
 import React from 'react';
+import { education } from '../utils/mock';
 import { Card } from '../components/ui/card';
 import { GraduationCap, Award, Calendar, School } from 'lucide-react';
 
 const Education = () => {
-  const educationData = [
-    {
-      degree: 'B.Tech, Computer Science & Engineering',
-      institution: 'Bharath Institute of Science and Technology',
-      period: '2022 - 2026',
-      cgpa: '8.81',
-      icon: GraduationCap,
-      scoreLabel: 'CGPA'
-    },
-    {
-      degree: 'Intermediate (MPC)',
-      institution: "St. Vincent's. Mat. High. Sec. School",
-      period: '2020 - 2022',
-      cgpa: '74.5%',
-      icon: School,
-      scoreLabel: 'Score'
-    },
-    {
-      degree: 'State Board (SSLC)',
-      institution: "St. Vincent's. Mat. High. Sec. School",
-      period: '2019 - 2020',
-      cgpa: '81.6%',
-      icon: School,
-      scoreLabel: 'Score'
-    }
-  ];
+  const getIcon = (degree) => {
+    if (degree.toLowerCase().includes('b.tech')) return GraduationCap;
+    return School;
+  };
 
   return (
     <section id="education" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
@@ -39,8 +18,8 @@ const Education = () => {
         </div>
 
         <div className="space-y-6">
-          {educationData.map((edu, index) => {
-            const IconComponent = edu.icon;
+          {education.map((edu, index) => {
+            const IconComponent = getIcon(edu.degree);
             return (
               <Card 
                 key={index}

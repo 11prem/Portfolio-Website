@@ -5,7 +5,7 @@ export const contactFormMock = {
   submit: async (formData) => {
     // Simulate API delay
     await new Promise(resolve => setTimeout(resolve, 1000));
-    
+
     // Mock successful submission
     console.log('Mock contact form submission:', formData);
     return {
@@ -44,24 +44,39 @@ export const personalInfo = {
   name: 'Prem B',
   location: 'Chengalpattu, Tamil Nadu, India',
   taglines: {
-    short: 'Engineering AI systems and real-time mobile apps.',
-    recruiter: 'B.Tech CSE student — Google Developers & ISRO internships, production focus.',
-    technical: 'Building production-grade ML systems, real-time dashboards, and Android apps (Flutter).'
+    short: 'Developing enterprise AI applications, real-time data pipelines, and intelligent automation.',
+    recruiter: 'Computer Science graduate — HCLTech, Google Developers & ISRO internships, production focus.',
+    technical: 'Building scalable backend systems, RAG workflows, data pipelines, and AI-powered solutions.'
   },
-  subtitle: 'Mobile App Developer, AI/ML Engineer, Full-Stack Developer',
-  about: 'Computer Science & Engineering undergrad (B.Tech, CGPA 8.81). I build production-ready systems combining mobile apps, real-time backends, and ML models. Recent internships: Google Developers (AI/ML), ISRO ISTRAC (Full-Stack), ISRO SDSC (AI & Robotics). I focus on measurable outcomes: data latency reduction, production dashboards, and reliable mobile integrations.'
+  subtitle: 'Data Engineer, AI/ML Engineer, Full-Stack Developer',
+  about: 'Computer Science graduate with hands-on experience in Generative AI, Retrieval-Augmented Generation (RAG), Data Engineering, Machine Learning, and Full-Stack Development. Experienced in developing enterprise AI applications, data pipelines, and intelligent automation solutions using FastAPI, React, PostgreSQL, Docker, Python, and LLMs. Interned at HCLTech and Indian Space Research Organization-ISRO, building scalable backend systems, data engineering workflows, and AI-powered applications for real-world enterprise use cases.'
 };
 
 export const skills = {
-  'Programming Languages': ['Python', 'Java', 'JavaScript', 'Dart (Flutter)'],
-  'Database': ['SQL', 'NoSQL - Firebase'],
-  'Web & Full-Stack': ['Flask', 'Dash', 'RESTful APIs', 'HTML/CSS', 'UDP', 'Real-time Data Acquisition'],
-  'AI/ML & Data Analytics': ['TensorFlow', 'PyTorch', 'Scikit-learn', 'OpenCV', 'Pandas', 'Matplotlib', 'CNNs', 'RNNs', 'Reinforcement Learning'],
-  'DevOps & Cloud': ['AWS', 'CI/CD (GitHub Actions)', 'Virtual Environments', 'ELK Stack'],
-  'Web Technology': ['Next.js', 'Vanta.js', 'Tailwind CSS', 'GitHub Actions', 'Vercel / S3+CloudFront']
+  'Languages': ['Python', 'SQL', 'Java', 'JavaScript', 'Dart'],
+  'AI & Machine Learning': ['Generative AI', 'Retrieval-Augmented Generation (RAG)', 'Prompt Engineering', 'TensorFlow', 'PyTorch', 'Scikit-learn', 'OpenCV', 'Sentence Transformers', 'Reinforcement Learning (PPO, DQN)'],
+  'Backend Development': ['FastAPI', 'Flask', 'REST APIs', 'SQLAlchemy', 'JWT Authentication', 'RBAC'],
+  'Data Engineering': ['Apache Kafka', 'Apache NiFi', 'Logstash', 'ETL', 'Data Warehousing', 'Pandas', 'Polars', 'OpenPyXL', 'Data Validation'],
+  'Databases': ['PostgreSQL', 'pgvector', 'SQLite', 'Firebase Realtime Database'],
+  'Frontend': ['React', 'Next.js', 'Flutter'],
+  'Tools': ['Docker', 'Git', 'GitHub', 'Jupyter Notebook', 'VS Code', 'CI/CD'],
+  'Languages Spoken': ['Tamil (Native)', 'English (Fluent)', 'Hindi (Proficient)', 'Japanese (Basic)']
 };
 
 export const projects = [
+  {
+    id: 'resolve-ai',
+    title: 'Resolve AI — Enterprise AI Helpdesk Agent',
+    summary: 'RAG-powered enterprise IT helpdesk using Gemini 2.5 Flash to automate ticket classification, troubleshooting, and intelligent support workflows.',
+    bullets: [
+      'Built a RAG-powered enterprise IT helpdesk using Gemini 2.5 Flash to automate ticket classification, troubleshooting, and intelligent support workflows.',
+      'Implemented semantic search, JWT authentication, RBAC, audit logging, safety-gated tool execution, and Docker deployment.'
+    ],
+    tech: ['FastAPI', 'React', 'PostgreSQL', 'pgvector', 'Gemini', 'Docker'],
+    github: 'https://github.com/11prem/Resolve-AI',
+    demo: null,
+    image: '/images/Resolve_AI.png'
+  },
   {
     id: 'aarcs',
     title: 'AARCS — Automated Ambulance Route Clearance System',
@@ -71,7 +86,7 @@ export const projects = [
       'Integrated Google Maps API with real-time GPS tracking and dynamic route recalculation, enabling live ETA predictions across 10+ traffic signals.',
       'Implemented Firebase Admin SDK custom token authentication & role-based access control, achieving 65% reduction in traffic congestion delays.'
     ],
-    tech: ['Flutter (Android)', 'Flask', 'Flask-SocketIO', 'Firebase', 'AWS', 'GitHub Actions'],
+    tech: ['Flutter', 'Firebase', 'Node.js', 'Google Maps API'],
     github: 'https://github.com/11prem/AARCS-AMBULANCE',
     demo: null,
     image: '/images/AARCS.png'
@@ -136,22 +151,28 @@ export const projects = [
 
 export const experience = [
   {
+    company: 'HCLTech',
+    role: 'Data Engineer Intern',
+    period: 'Mar 2026 – Present',
+    description: 'Developed Python-based data validation and preprocessing solutions using Pandas, Polars, and OpenPyXL to automate enterprise Excel processing and reporting workflows. Engineered a real-time ETL pipeline using Apache NiFi, Kafka, Logstash, and PostgreSQL; contributed to SQL development, data warehousing, and business requirement analysis.'
+  },
+  {
     company: 'Google Developers',
     role: 'Machine Learning Engineer Intern',
     period: 'Apr 2025 – May 2025',
-    description: 'Cleaned and normalized eight large datasets, developed an interactive Dash visualization suite, and delivered technical documentation and video walkthroughs used by three global teams to uncover content trends.'
+    description: 'Built feature engineering pipelines across 8+ datasets to improve data quality and model performance. Developed an interactive Dash dashboard for data visualization and business insights.'
   },
   {
     company: 'ISRO ISTRAC',
     role: 'Software Engineer Intern',
     period: 'Jan 2025 – Feb 2025',
-    description: 'Built a real-time telemetry dashboard using Flask and SQL for launch data, automated binary-to-JSON data ingestion and query filtering, and integrated the ELK stack for centralized logging, reducing latency and improving error analysis speed.'
+    description: 'Built a Flask-based telemetry dashboard integrated with SQL pipelines, reducing processing latency from 5s to 2s. Automated binary-to-JSON conversion and ELK logging, reducing manual data preparation by 60%.'
   },
   {
     company: 'ISRO SDSC',
     role: 'AI and Robotics Intern',
     period: 'Sep 2024 – Oct 2024',
-    description: 'Designed and simulated robotic-arm workflows in PyBullet and OpenCV, trained PPO and DQN reinforcement learning agents, and documented architecture while conducting hands-on training for a team of five to optimize assembly precision.'
+    description: 'Designed and simulated robotic-arm workflows in PyBullet and OpenCV, trained PPO and DQN reinforcement learning agents, and documented architecture while conducting hands-on training for a team of five to optimize assembly precision.'
   }
 ];
 
@@ -160,7 +181,7 @@ export const education = [
     degree: 'B.Tech, Computer Science & Engineering',
     period: '2022 - 2026',
     institution: 'Bharath Institute of Science and Technology',
-    cgpa: '8.81',
+    cgpa: '8.83',
     scoreLabel: 'CGPA'
   },
   {
@@ -176,5 +197,17 @@ export const education = [
     institution: "St. Vincent's. Mat. High. Sec. School",
     cgpa: '81.6%',
     scoreLabel: 'Score'
+  }
+];
+
+export const publications = [
+  {
+    title: 'Adaptive Real Time Path Optimization for Traffic Signal Using AARCS',
+    publisher: 'IEEE',
+    date: 'Feb 2025',
+    bullets: [
+      'Published IEEE research proposing a GPS-based emergency mobility framework to reduce ambulance delays in urban traffic.',
+      'Designed system architecture connecting driver apps, traffic monitoring interfaces, and live location services.'
+    ]
   }
 ];

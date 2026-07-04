@@ -8,12 +8,12 @@ const About = () => {
     {
       icon: GraduationCap,
       title: 'Education',
-      value: 'B.Tech CSE, CGPA 8.81'
+      value: 'B.Tech CSE, CGPA 8.83'
     },
     {
       icon: Briefcase,
       title: 'Experience',
-      value: 'Google Developers & ISRO'
+      value: 'HCLTech, Google, ISRO'
     },
     {
       icon: Target,

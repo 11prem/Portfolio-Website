@@ -9,6 +9,7 @@ import Skills from './sections/Skills';
 import Projects from './sections/Projects';
 import Experience from './sections/Experience';
 import Education from './sections/Education';
+import Publications from './sections/Publications';
 import Resume from './sections/Resume';
 import Contact from './sections/Contact';
 import Footer from './components/Footer';
@@ -26,6 +27,7 @@ const Portfolio = () => {
           <About />
           <Skills />
           <Projects />
+          <Publications />
           <Experience />
           <Education />
           <Resume />
